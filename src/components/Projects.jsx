@@ -1,9 +1,9 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import { projectsData } from "../data/projectsData";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AssetsFolder from "../assets/images/projects-images/folder.webp";
-
+import d3Icon from "../assets/images/projects-images/3dcube.webp";
+import { projectsData } from "../data/projectsData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +15,7 @@ const Projects = () => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const images = projectImagesRef.current;
-       const isDesktop = window.innerWidth > 424;
+      const isDesktop = window.innerWidth > 424;
       const animations = [
         {
           from: {
@@ -25,7 +25,7 @@ const Projects = () => {
             rotation: 0,
           },
           to: {
-            x:isDesktop ? -180 : -130,
+            x: isDesktop ? -180 : -130,
             y: -120,
             scale: isDesktop ? 0.9 : 0.8,
             rotation: -50,
@@ -41,7 +41,7 @@ const Projects = () => {
           to: {
             x: -85,
             y: -145,
-            scale:isDesktop ? 0.9 : 0.8,
+            scale: isDesktop ? 0.9 : 0.8,
             rotation: -10,
           },
         },
@@ -55,7 +55,7 @@ const Projects = () => {
           to: {
             x: 0,
             y: -190,
-            scale:isDesktop ? 0.9 : 0.8,
+            scale: isDesktop ? 0.9 : 0.8,
             rotation: 10,
           },
         },
@@ -75,8 +75,6 @@ const Projects = () => {
         },
       ];
 
-
-      
       images.forEach((image, index) => {
         if (!image || !animations[index]) return;
 
@@ -90,7 +88,7 @@ const Projects = () => {
             start: "top 75%",
             end: "top 20%",
             scrub: 1,
-            markers:true
+            // markers: true,
           },
         });
       });
@@ -153,7 +151,9 @@ const Projects = () => {
                   alt={`Project ${index + 1}`}
                   draggable="false"
                   className={`absolute w-[190px] md:w-[195px] object-contain rounded-xl shadow-2xl select-none pointer-events-none ${
-                    activeProject === index ? "opacity-100 z-50" : "opacity-100 z-50"
+                    activeProject === index
+                      ? "opacity-100 z-50"
+                      : "opacity-100 z-50"
                   }`}
                   src={project.image}
                 />
@@ -197,7 +197,7 @@ const Projects = () => {
                           isActive ? "opacity-100" : "opacity-50"
                         }`}
                         draggable="false"
-                        src={project.icon}
+                        src={d3Icon}
                       />
 
                       <span
@@ -208,25 +208,6 @@ const Projects = () => {
                         {project.title}
                       </span>
                     </div>
-
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={18}
-                      height={18}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className={`flex-shrink-0 transition-transform duration-350 ${
-                        isActive
-                          ? "rotate-180 text-white/70"
-                          : "rotate-0 text-white/30"
-                      }`}
-                    >
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
                   </div>
 
                   <div

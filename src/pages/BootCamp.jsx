@@ -11,6 +11,7 @@ import WhyKodr from "../components/WhyKodr";
 import Marquee from "../components/CompanyMarquee";
 import LearningJourney from "../components/LearningJourney";
 import Syllabus from "../components/Syllabus";
+import Features from "../components/students-features/Features";
 
 const BootCamp = () => {
   return (
@@ -23,6 +24,7 @@ const BootCamp = () => {
         <LearningJourney />
         <Syllabus />
         <Projects />
+        <Features />
         <Stats />
         <Curriculum />
         <Mentors />

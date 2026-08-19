@@ -1,8 +1,8 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { syllabusData } from "../data/syllabusData";
 import { CodeXml } from "lucide-react";
 import Button from "./Button";
+import { syllabusData } from "../data/syllabusData";
 
 const Syllabus = () => {
   const [activeModule, setActiveModule] = useState(0);
