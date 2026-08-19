@@ -1,17 +1,17 @@
 import MarqueeModule from "react-fast-marquee";
-
+import companyLogo from "../assets/images/companylogos.webp";
 const FastMarquee = MarqueeModule.default || MarqueeModule;
 
 const Marquee = () => {
   return (
-    <div className="mt-20 sm:mt-0 my-10">
+    <div className="md:mt-20 sm:mt-0 my-5 md:my-10">
       <FastMarquee speed={100} gradient={false}>
         {[1, 2].map((item) => (
           <img
             key={item}
-            src="https://dfdx9u0psdezh.cloudfront.net/logos/companylogos.webp"
+            src={companyLogo}
             alt="Company Logo"
-            className="h-[4vh] md:h-[7vh] object-cover md:mr-16 mr-12"
+            className="h-[6vh] md:h-[7vh] object-cover md:mr-16 mr-12"
           />
         ))}
       </FastMarquee>

@@ -9,6 +9,8 @@ import Stats from "../components/Stats";
 import Testimonials from "../components/Testimonials";
 import WhyKodr from "../components/WhyKodr";
 import Marquee from "../components/CompanyMarquee";
+import LearningJourney from "../components/LearningJourney";
+import Syllabus from "../components/Syllabus";
 
 const BootCamp = () => {
   return (
@@ -16,11 +18,13 @@ const BootCamp = () => {
       <main>
         <Hero />
         <Marquee />
-        <Stats />
-        <Placement />
         <WhyKodr />
-        <Curriculum />
+        <Placement />
+        <LearningJourney />
+        <Syllabus />
         <Projects />
+        <Stats />
+        <Curriculum />
         <Mentors />
         <Testimonials />
         <Pricing />
