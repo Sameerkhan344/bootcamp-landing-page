@@ -1,0 +1,35 @@
+import Curriculum from "./components/Curriculum";
+import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Mentors from "./components/Mentors";
+import Placement from "./components/Placement";
+import Pricing from "./components/Pricing";
+import Projects from "./components/Projects";
+import Stats from "./components/Stats";
+import Testimonials from "./components/Testimonials";
+import WhyKodr from "./components/WhyKodr";
+
+const App = () => {
+  return (
+    <>
+    <Header />
+      <main>
+        <Hero />
+        <Stats />
+        <Placement />
+        <WhyKodr />
+        <Curriculum />
+        <Projects />
+        <Mentors />
+        <Testimonials />
+        <Pricing />
+        <FAQ />
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default App;
