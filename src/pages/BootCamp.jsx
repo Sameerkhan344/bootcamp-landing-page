@@ -13,6 +13,7 @@ import LearningJourney from "../components/LearningJourney";
 import Syllabus from "../components/Syllabus";
 import Features from "../components/students-features/Features";
 import Reviews from "../components/reviews/Reviews";
+import { Instructors } from "../components/instructor/Instructors";
 
 const BootCamp = () => {
   return (
@@ -28,6 +29,7 @@ const BootCamp = () => {
         <Features />
         <Stats />
         <Reviews />
+        <Instructors/>
         <Curriculum />
         <Mentors />
         <Testimonials />

@@ -1,8 +1,13 @@
+import review1 from "../assets/images/reviews-images/review_01.webp";
+import review2 from "../assets/images/reviews-images/review_02.webp";
+import review3 from "../assets/images/reviews-images/review_03.webp";
+import review4 from "../assets/images/reviews-images/review_04.webp";
+
+
 export const reviewsData = [
   {
     id: 1,
-    image:
-      "https://px.pixxo.io/sheryians/kodr_assets/review_01.png",
+    image:review1,
     imageAlt: "Mini Hacksprint",
     badge: "Team Tigada",
     category: "STUDENTS SPOTLIGHT",
@@ -13,8 +18,7 @@ export const reviewsData = [
   },
   {
     id: 2,
-    image:
-      "https://px.pixxo.io/sheryians/kodr_assets/review_02.png",
+    image:review2,
     imageAlt: "Cracked First Job",
     badge: "KODR",
     category: "PLACED STUDENT",
@@ -25,8 +29,7 @@ export const reviewsData = [
   },
   {
     id: 3,
-    image:
-      "https://px.pixxo.io/sheryians/kodr_assets/review_03.png",
+    image:review3,
     imageAlt: "Brandsmashers",
     badge: "Sheryians",
     category: "PARTNERSHIP",
@@ -37,8 +40,7 @@ export const reviewsData = [
   },
   {
     id: 4,
-    image:
-      "https://px.pixxo.io/sheryians/kodr_assets/review_04.png",
+    image:review4,
     imageAlt: "Bootcamp Success",
     badge: "KODR",
     category: "PLACED STUDENT",

@@ -57,7 +57,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-{
-  /* <div className="z-10 mx-2 md:mx-10 lg:mx-20"></div> */
-}

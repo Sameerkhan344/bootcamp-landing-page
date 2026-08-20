@@ -40,9 +40,6 @@ const Header = () => {
           </div>
         </div>
         <div class="hidden md:block">
-          {/* <button className="py-3 md:py-2 px-8 rounded-full font-medium flex items-center justify-center gap-3 text-[1.1rem] md:text-lg cursor-pointer bg-white text-black border border-black shadow-[inset_0_6px_12px_rgba(0,0,0,0.15),_0_2px_4px_rgba(0,0,0,0.05)] hover:bg-neutral-50 !px-8 hover:brightness-95 active:scale-95 shadow-[0_4px_20px_rgba(255,255,255,0.15)]">
-            <span>Apply Now!</span>
-          </button> */}
           <Button title="Apply Now!" showArrow={false} variant="secondary" />
         </div>
         <button
