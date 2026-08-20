@@ -12,6 +12,7 @@ import Marquee from "../components/CompanyMarquee";
 import LearningJourney from "../components/LearningJourney";
 import Syllabus from "../components/Syllabus";
 import Features from "../components/students-features/Features";
+import Reviews from "../components/reviews/Reviews";
 
 const BootCamp = () => {
   return (
@@ -26,6 +27,7 @@ const BootCamp = () => {
         <Projects />
         <Features />
         <Stats />
+        <Reviews />
         <Curriculum />
         <Mentors />
         <Testimonials />

@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AssetsFolder from "../assets/images/projects-images/folder.webp";
 import d3Icon from "../assets/images/projects-images/3dcube.webp";
 import { projectsData } from "../data/projectsData";
+import { IoIosArrowDown } from "react-icons/io";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -208,6 +209,7 @@ const Projects = () => {
                         {project.title}
                       </span>
                     </div>
+                      <IoIosArrowDown />
                   </div>
 
                   <div

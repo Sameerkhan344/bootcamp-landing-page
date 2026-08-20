@@ -55,3 +55,9 @@ html {
 .text-shadow-glow {
   text-shadow: 0 0 15px #6eeb2ca6, 0 0 30px #6eeb2c4d;
 }
+.review-prev.swiper-button-disabled,
+.review-next.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: not-allowed;
+}
