@@ -27,13 +27,14 @@ export const Instructors = () => {
           modules={[EffectCoverflow, Navigation]}
           effect="coverflow"
           centeredSlides
+          initialSlide={2}
           slidesPerView="auto"
           grabCursor
           watchSlidesProgress
           coverflowEffect={{
             rotate: 30,
             stretch: 0,
-            depth: 50,
+            depth: 30,
             modifier: 1,
             slideShadows: false,
           }}
@@ -49,7 +50,7 @@ export const Instructors = () => {
           {instructorsData.map((instructor) => (
             <SwiperSlide
               key={instructor.id}
-              className="instructor-slide !w-[185px]"
+              className="instructor-slide !w-[200px]"
             >
               {({ isActive }) => (
                 <InstructorSwiperCard

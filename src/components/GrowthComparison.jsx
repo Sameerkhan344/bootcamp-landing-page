@@ -1,20 +1,7 @@
 import { growthComparisonData } from "../data/growthComparisonData";
-import circleBg from "../assets/images/growth-images/Circle_bg.webp"
-const CheckIcon = () => (
-  <svg
-    className="w-3.5 h-3.5"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={3}
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M4.5 12.75l6 6 9-13.5"
-    />
-  </svg>
-);
+import circleBg from "../assets/images/growth-images/Circle_bg.webp";
+import Button from "./Button";
+import { IoIosCheckmark } from "react-icons/io";
 
 export default function GrowthComparison() {
   const { title, cards } = growthComparisonData;
@@ -22,7 +9,6 @@ export default function GrowthComparison() {
   return (
     <section className="min-h-screen w-full bg-black text-white relative overflow-hidden mt-10 md:mt-0 py-0 md:py-16 flex flex-col items-center justify-center gap-12 md:gap-16 z-10">
       <div className="z-10 w-full max-w-[1200px] px-6 flex flex-col items-center gap-12 md:gap-16">
-
         <h2 className="font-clash text-2xl md:text-5xl font-semibold z-10 text-white text-center flex flex-col gap-0 md:gap-2 !hidden sm:!flex">
           {title.desktop.map((line) => (
             <span key={line}>{line}</span>
@@ -34,7 +20,6 @@ export default function GrowthComparison() {
         </h2>
 
         <div className="w-full flex flex-col lg:flex-row gap-5 md:gap-20 justify-center items-center mt-0 md:mt-4">
-
           {cards.map((card) => {
             const isKodr = card.type === "kodr";
 
@@ -55,9 +40,7 @@ export default function GrowthComparison() {
                   <div className="text-center mb-8 flex flex-col gap-1.5 pb-6">
                     <h3
                       className={`font-clash text-2xl md:text-4xl font-semibold uppercase ${
-                        isKodr
-                          ? "text-[#6FEB2C]"
-                          : "text-white"
+                        isKodr ? "text-[#6FEB2C]" : "text-white"
                       }`}
                     >
                       {card.title}
@@ -65,9 +48,7 @@ export default function GrowthComparison() {
 
                     <p
                       className={`font-helvetica text-xs md:text-sm font-light tracking-wide ${
-                        isKodr
-                          ? "text-white"
-                          : "text-white"
+                        isKodr ? "text-white" : "text-white"
                       }`}
                     >
                       {card.description}
@@ -82,9 +63,7 @@ export default function GrowthComparison() {
                         <div
                           key={point.title}
                           className={`flex flex-col gap-2.5 ${
-                            !isLast
-                              ? "border-b border-white/[0.06] pb-6"
-                              : ""
+                            !isLast ? "border-b border-white/[0.06] pb-6" : ""
                           }`}
                         >
                           <div className="flex items-center gap-3">
@@ -95,14 +74,12 @@ export default function GrowthComparison() {
                                   : "bg-white"
                               } text-black`}
                             >
-                              <CheckIcon />
+                              <IoIosCheckmark size={50} />
                             </div>
 
                             <h4
                               className={`font-helvetica text-xs md:text-[13px] uppercase ${
-                                isKodr
-                                  ? "text-white"
-                                  : "text-neutral-300"
+                                isKodr ? "text-white" : "text-neutral-300"
                               }`}
                             >
                               {point.title}
@@ -111,9 +88,7 @@ export default function GrowthComparison() {
 
                           <p
                             className={`font-helvetica text-sm md:text-[15px] ${
-                              isKodr
-                                ? "text-white"
-                                : "text-neutral-400"
+                              isKodr ? "text-white" : "text-neutral-400"
                             }`}
                           >
                             {point.description}
@@ -124,27 +99,9 @@ export default function GrowthComparison() {
                   </div>
                 </div>
 
-
                 {isKodr && (
                   <div className="mt-8 w-full md:w-auto flex justify-center w-full">
-                    <button className="group py-3 md:py-2 px-8 rounded-full font-medium flex items-center justify-center gap-3 text-[1.1rem] md:text-lg cursor-pointer bg-gradient-to-b from-[#AC69FF] to-[#7200FF] text-white button-bordercolor hover:brightness-105 w-full md:w-auto">
-                      <span>{card.button}</span>
-
-                      <svg
-                        className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                        />
-                      </svg>
-                    </button>
+                    <Button title={card.button} />
                   </div>
                 )}
               </div>
@@ -153,13 +110,8 @@ export default function GrowthComparison() {
         </div>
 
         <div className="absolute hidden opacity-80 lg:flex w-full top-5 right-10">
-          <img
-            className="w-full"
-            alt=""
-            src={circleBg}
-          />
+          <img className="w-full" alt="" src={circleBg} />
         </div>
-
       </div>
     </section>
   );

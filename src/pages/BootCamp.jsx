@@ -5,7 +5,7 @@ import { BootcampPricing } from "../components/BootcampPricing";
 import Projects from "../components/Projects";
 import Stats from "../components/Stats";
 import WhyKodr from "../components/WhyKodr";
-import Marquee from "../components/CompanyMarquee";
+import CompanyMarquee from "../components/CompanyMarquee";
 import LearningJourney from "../components/LearningJourney";
 import Syllabus from "../components/Syllabus";
 import Features from "../components/students-features/Features";
@@ -18,7 +18,7 @@ const BootCamp = () => {
     <>
       <main>
         <Hero />
-        <Marquee />
+        <CompanyMarquee />
         <WhyKodr />
         <GrowthComparison/>
         <Placement />
