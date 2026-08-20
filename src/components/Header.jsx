@@ -14,7 +14,7 @@ const Header = () => {
           <img
             className="h-full"
             alt="sheryians-logo"
-            src="/src/assets/svgs/logo.svg"
+            src="/logo.svg"
           />
         </Link>
         <div className="hidden md:flex items-center bg-white/[0.04] border border-white/[0.08] px-8 py-2.5 rounded-full backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.37)] transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.06]">

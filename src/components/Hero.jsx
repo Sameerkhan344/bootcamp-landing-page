@@ -1,5 +1,7 @@
 import Button from "./Button";
 import Counter from "./Counter";
+import heroBg from "../assets/images/hero-images/hero_bg.webp"
+import kodrTextImg from "../assets/images/hero-images/Kodr_text_small.webp"
 
 const Hero = () => {
   return (
@@ -8,17 +10,17 @@ const Hero = () => {
         <img
           className="h-full w-full"
           alt="kodr-desktop-bg-img"
-          src="https://px.pixxo.io/sheryians/kodr_assets/Kodr_text_small.png"
+          src={kodrTextImg}
         />
       </div>
       <div className="w-full absolute hidden md:block z-1 top-20 left-20">
         <img
           className="h-full w-full "
           alt="kodar-mobile-bg-img"
-          src="https://px.pixxo.io/sheryians/kodr_assets/hero_bg.png"
+          src={heroBg}
         />
       </div>
-      <div className="z-100 w-full mt-30 mb-10 items-center justify-center flex flex-col gap-2 md:gap-7">
+      <div className="relative z-100 w-full mt-30 mb-10 items-center justify-center flex flex-col gap-2 md:gap-7">
         <div className="flex sm:hidden flex-col items-center gap-2 ">
           <h1 className=" mb-5 text-[2.6rem] text-center px-3 leading-[2.7rem]  capitalize font-semibold font-clash">
             You're Just{" "}
