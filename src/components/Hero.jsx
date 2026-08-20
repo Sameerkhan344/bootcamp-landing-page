@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="min-h-screen relative w-full overflow-hidden bg-cover bg-center bg-[url('https://px.pixxo.io/sheryians/kodr_assets/Background_001.png')]">
       <div className="w-full md:w-[90%] absolute top-23 hidden md:block md:top-20 opacity-15 left-0 sm:left-5  md:left-20 lg:left-15 xl:left-20">
         <img
-          class="h-full w-full"
+          className="h-full w-full"
           alt="kodr-desktop-bg-img"
           src="https://px.pixxo.io/sheryians/kodr_assets/Kodr_text_small.png"
         />
@@ -45,11 +45,16 @@ const Hero = () => {
           you sharper.
         </p>
         <div className="hidden md:flex">
-        <Button title="Explore Program" showArrow={true} variant="primary" />
+          <Button title="Explore Program" showArrow={true} variant="primary" />
         </div>
         <Counter />
         <div className="w-full md:hidden sm:w-auto !px-4 py-3 md:py-2 ">
-        <Button title={"Explore Program"} className={"w-full"} showArrow={true} variant="primary" />
+          <Button
+            title={"Explore Program"}
+            className={"w-full"}
+            showArrow={true}
+            variant="primary"
+          />
         </div>
       </div>
     </section>

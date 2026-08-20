@@ -1,6 +1,6 @@
 import { placementData } from "../data/placementData";
 import Button from "./Button";
-import bgImg from "../assets/images/placement-images/Left_Titled_s.webp"
+import bgImg from "../assets/images/placement-images/Left_Titled_s.webp";
 
 const PlacementGrid = () => {
   const { title, students, placements } = placementData;
@@ -18,8 +18,6 @@ const PlacementGrid = () => {
       </span>
 
       <div className="relative z-10 w-full px-6 md:px-20 flex flex-col items-center">
-        
-
         <h2 className="font-clash text-2xl md:text-5xl font-semibold z-10 text-white text-center flex flex-col gap-0 md:gap-2">
           {title.map((line) => (
             <span key={line}>{line}</span>
@@ -44,7 +42,6 @@ const PlacementGrid = () => {
         </div>
 
         <div className="w-full mt-12 md:mt-16 flex flex-col lg:flex-row items-center sm:items-start lg:items-center justify-between gap-8 pt-4">
-          
           <div className="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-3.5">
             <img
               className="h-10 md:h-12 object-contain"
