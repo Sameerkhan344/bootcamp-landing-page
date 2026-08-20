@@ -31,9 +31,9 @@ export const Instructors = () => {
           grabCursor
           watchSlidesProgress
           coverflowEffect={{
-            rotate: 20,
+            rotate: 30,
             stretch: 0,
-            depth: 130,
+            depth: 100,
             modifier: 1,
             slideShadows: false,
           }}
@@ -66,7 +66,7 @@ export const Instructors = () => {
           type="button"
           onClick={() => swiperRef.current?.slidePrev()}
           aria-label="Previous"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-300 text-gray-500 transition-all duration-200 hover:bg-gray-200 active:scale-95"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:border-white hover:bg-white/5 transition-all duration-200 active:scale-95"
         >
           <MdKeyboardArrowLeft size={22} color="white" />
         </button>
@@ -75,7 +75,7 @@ export const Instructors = () => {
           type="button"
           onClick={() => swiperRef.current?.slideNext()}
           aria-label="Next"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-300 text-gray-500 transition-all duration-200 hover:bg-gray-200 active:scale-95"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-300 text-gray-500  hover:bg-white/5 transition-all duration-200 hover:bg-gray-200 active:scale-95"
         >
           <MdKeyboardArrowRight size={22} color="white" />
         </button>
