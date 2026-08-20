@@ -1,12 +1,10 @@
 import Curriculum from "../components/Curriculum";
 import FAQ from "../components/FAQ";
 import Hero from "../components/Hero";
-import Mentors from "../components/Mentors";
 import Placement from "../components/Placement";
 import { BootcampPricing } from "../components/BootcampPricing";
 import Projects from "../components/Projects";
 import Stats from "../components/Stats";
-import Testimonials from "../components/Testimonials";
 import WhyKodr from "../components/WhyKodr";
 import Marquee from "../components/CompanyMarquee";
 import LearningJourney from "../components/LearningJourney";
@@ -33,8 +31,6 @@ const BootCamp = () => {
         <BootcampPricing />
         <FAQ />
         <Curriculum />
-        <Mentors />
-        <Testimonials />
       </main>
     </>
   );
