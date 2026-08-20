@@ -27,8 +27,10 @@ const BootCamp = () => {
         <Projects />
         <Features />
         <Stats />
+        <div className="relative overflow-hidden">
         <Reviews />
         <Instructors />
+        </div>
         <BootcampPricing />
         <FAQ />
       </main>

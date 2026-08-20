@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 px-6 md:px-12 transition-all duration-300 py-4 bg-black/20 backdrop-blur-md translate-y-0">
+    <header className="fixed top-0 left-0 w-full z-101 px-6 md:px-12 transition-all duration-300 py-4 bg-black/20 backdrop-blur-md translate-y-0">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link
           href={"/"}
