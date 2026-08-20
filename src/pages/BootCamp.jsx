@@ -1,4 +1,3 @@
-import Curriculum from "../components/Curriculum";
 import FAQ from "../components/FAQ";
 import Hero from "../components/Hero";
 import Placement from "../components/Placement";
@@ -12,6 +11,7 @@ import Syllabus from "../components/Syllabus";
 import Features from "../components/students-features/Features";
 import Reviews from "../components/reviews/Reviews";
 import { Instructors } from "../components/instructor/Instructors";
+import GrowthComparison from "../components/GrowthComparison";
 
 const BootCamp = () => {
   return (
@@ -20,6 +20,7 @@ const BootCamp = () => {
         <Hero />
         <Marquee />
         <WhyKodr />
+        <GrowthComparison/>
         <Placement />
         <LearningJourney />
         <Syllabus />
@@ -27,10 +28,9 @@ const BootCamp = () => {
         <Features />
         <Stats />
         <Reviews />
-        <Instructors/>
+        <Instructors />
         <BootcampPricing />
         <FAQ />
-        <Curriculum />
       </main>
     </>
   );
