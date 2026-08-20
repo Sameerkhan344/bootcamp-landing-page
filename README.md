@@ -1,16 +1,70 @@
-# React + Vite
+# KODR Bootcamp Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern landing page built for the KODR Bootcamp. The main focus of this project was to create a clean, responsive and interactive experience instead of just a static landing page.
 
-Currently, two official plugins are available:
+The page includes different sections for the bootcamp, instructors, student growth, pricing, FAQs and other important information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What I Used
 
-## React Compiler
+- React.js
+- Vite
+- Tailwind CSS
+- GSAP
+- ScrollTrigger
+- Swiper.js
+- React Icons
+- Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Main Features
 
-## Expanding the ESLint configuration
+- Fully responsive design
+- Dark themed UI
+- GSAP animations and interactions
+- Scroll based animations
+- Magnetic card hover effects
+- Interactive instructor slider
+- Swiper Coverflow effect
+- FAQ accordion
+- Responsive pricing section
+- Growth comparison section
+- Reusable components
+- Separate data files for dynamic content
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Animations
+
+I used GSAP for most of the interactive animations on the page.
+
+Some of the animations include:
+
+- Cards appearing on scroll
+- Mouse movement based card animation
+- Magnetic hover effect
+- 3D card tilt
+- Floating background elements
+- Smooth hover transitions
+
+The instructor section uses Swiper.js with the Coverflow effect to give the cards a 3D carousel look.
+
+## Project Structure
+
+```text
+src
+├── assets
+│   ├── images
+│   └── svgs
+│
+├── components
+│   ├── Button.jsx
+│   ├── GrowthComparison.jsx
+│   ├── Instructors.jsx
+│   ├── InstructorSwiperCard.jsx
+│   └── ...
+│
+├── data
+│   ├── growthComparisonData.js
+│   ├── instructorsData.js
+│   └── ...
+│
+├── App.jsx
+├── main.jsx
+└── index.css

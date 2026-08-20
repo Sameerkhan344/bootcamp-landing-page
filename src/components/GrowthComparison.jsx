@@ -2,9 +2,69 @@ import { growthComparisonData } from "../data/growthComparisonData";
 import circleBg from "../assets/images/growth-images/Circle_bg.webp";
 import Button from "./Button";
 import { IoIosCheckmark } from "react-icons/io";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 export default function GrowthComparison() {
   const { title, cards } = growthComparisonData;
+
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const cards = cardsRef.current;
+
+    cards.forEach((card) => {
+      if (!card) return;
+
+      const handleMouseMove = (e) => {
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - (rect.left + rect.width / 2);
+        const y = e.clientY - (rect.top + rect.height / 2);
+
+        gsap.to(card, {
+          x: x * 0.08,
+          y: y * 0.08,
+          rotateX: -y * 0.04,
+          rotateY: x * 0.04,
+          scale: 1.02,
+          duration: 0.35,
+          ease: "power3.out",
+          overwrite: true,
+        });
+      };
+
+      const handleMouseEnter = () => {
+        gsap.to(card, {
+          scale: 1.02,
+          duration: 0.3,
+          ease: "power3.out",
+        });
+      };
+
+      const handleMouseLeave = () => {
+        gsap.to(card, {
+          x: 0,
+          y: 0,
+          rotateX: 0,
+          rotateY: 0,
+          scale: 1,
+          duration: 0.7,
+          ease: "elastic.out(1, 0.5)",
+        });
+      };
+
+      card.addEventListener("mousemove", handleMouseMove);
+      card.addEventListener("mouseenter", handleMouseEnter);
+      card.addEventListener("mouseleave", handleMouseLeave);
+
+      return () => {
+        card.removeEventListener("mousemove", handleMouseMove);
+        card.removeEventListener("mouseenter", handleMouseEnter);
+        card.removeEventListener("mouseleave", handleMouseLeave);
+      };
+    });
+  }, []);
 
   return (
     <section className="min-h-screen w-full bg-black text-white relative overflow-hidden mt-10 md:mt-0 py-0 md:py-16 flex flex-col items-center justify-center gap-12 md:gap-16 z-10">
@@ -20,12 +80,15 @@ export default function GrowthComparison() {
         </h2>
 
         <div className="w-full flex flex-col lg:flex-row gap-5 md:gap-20 justify-center items-center mt-0 md:mt-4">
-          {cards.map((card) => {
+          {cards.map((card, index) => {
             const isKodr = card.type === "kodr";
 
             return (
               <div
                 key={card.id}
+                ref={(el) => {
+                  cardsRef.current[index] = el;
+                }}
                 className={`relative w-full rounded-2xl p-8 md:p-10 flex flex-col justify-between overflow-hidden shadow-2xl transition-all duration-300 ${
                   isKodr
                     ? "bg-gradient-to-b from-[#421B73] to-[#000000] gradient-border purple-growth-shadow"
