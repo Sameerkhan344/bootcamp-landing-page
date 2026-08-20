@@ -87,7 +87,7 @@ const Projects = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 75%",
-            end: "top 20%",
+            end:isDesktop? "top 20%" : "top 50%",
             scrub: 1,
             // markers: true,
           },
